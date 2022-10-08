@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/07 14:57:55 by ccottin           #+#    #+#             */
+/*   Updated: 2022/10/07 14:58:20 by ccottin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include <iomanip>
 #include <limits>
@@ -22,15 +34,13 @@ void	NewYork(Zombie *Horde)
 
 int	main(void)
 {
-	std::string	name;
+	std::string	name = "The Horde";
 
-	std::cout << "Enter a Zombie Name :" << std::endl;
-	std::cin >> name;
 	Zombie *Horde = zombieHorde(42, name);
 	Horde[0].announce();
 	Horde->announce();
 	NewYork(Horde);
-	std::cout << "Back to main fonction! Type something to continue...";
+	std::cout << "Back to main fonction! ";
 	std::cin >> name;
 	delete [] Horde;
 }

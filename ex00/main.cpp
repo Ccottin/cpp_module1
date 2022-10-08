@@ -1,13 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/07 14:56:09 by ccottin           #+#    #+#             */
+/*   Updated: 2022/10/07 14:56:12 by ccottin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include <iomanip>
 #include "Zombie.hpp"
 
 void	randomChumpTest(void)
 {
-	std::string	name;
+	std::string	name = "Random";
 
-	std::cout << "Enter Zombie Name :\n";
-	std::cin >> name;
+	std::cout << "Zombie Name is " << name << std::endl;
 	randomChump(name);
 	std::cout << "\n\n\n";
 }
@@ -15,10 +26,9 @@ void	randomChumpTest(void)
 Zombie	*newZombieTest(void)
 {	
 	Zombie		*Z;
-	std::string	name;
+	std::string	name = "Zombie";
 
-	std::cout << "Enter Zombie Name :\n";
-	std::cin >> name;
+	std::cout << "Zombie Name is " << name << std::endl;
 	Z = newZombie(name);
 	return (Z);
 }
@@ -32,19 +42,15 @@ void	DallasCity(Zombie* Cramberries)
 
 int	main(void)
 {
-	std::string	nothing;
-
 	std::cout << "A randomChump is created" << std::endl;
 	randomChumpTest();
-	std::cout << "Back to main fonction! type something to continue..." << std::endl;
-	std::cin >> nothing;
+	std::cout << "Back to main fonction!"  << std::endl << std::endl;
 	std::cout << "A newZombie is created" << std::endl;
+	
 	Zombie* Cramberries = newZombieTest();
-	std::cout << "Back to main fonction! type something to continue..." << std::endl;
-	std::cin >> nothing;
+	std::cout << "Back to main fonction!"  << std::endl << std::endl;
 	Cramberries->announce();
 	DallasCity(Cramberries);
-	std::cout << "Back to main fonction! type something to continue..." << std::endl;
-	std::cin >> nothing;
+	std::cout << "Back to main fonction!"  << std::endl << std::endl;
 	delete Cramberries;
 }

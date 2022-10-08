@@ -1,8 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/08 18:58:18 by ccottin           #+#    #+#             */
+/*   Updated: 2022/10/08 20:14:17 by ccottin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include <string>
 #include <cstring>
 #include <fstream>
 #include <ios>
+#include <cstdlib>
 
 std::string	change_occurences(std::string s1, std::string s2, std::string str)
 {
@@ -41,6 +54,11 @@ void		open_stream(std::string filename, std::string s1, std::string s2)
 	cstr = new char[filename.length() + 1];
 	std::strcpy(cstr, filename.c_str());
 	file.open(cstr);
+	if (!file.is_open())
+	{
+		std::cout << "File opening problem" << std::endl;
+		exit(1);
+	}
 	delete [] cstr;
 	cstr = new char[str.length() + 1];
 	std::strcpy(cstr, str.c_str());
@@ -65,6 +83,9 @@ int		main(int ac, char **av)
 	if (ac != 4)
 		return (0);
 	if (!av[1] || !av[2] || !av[3])
+	{
+		std::cout << "Invalid program input" << std::endl;
 		return (0);
 	open_stream(av[1], av[2], av[3]);
+	return (0);
 }
