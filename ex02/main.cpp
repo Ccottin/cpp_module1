@@ -6,7 +6,7 @@
 /*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 15:00:54 by ccottin           #+#    #+#             */
-/*   Updated: 2022/10/07 15:00:56 by ccottin          ###   ########.fr       */
+/*   Updated: 2022/10/10 20:14:07 by ccottin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(void)
 	std::string&	stringREF = str;
 	
 	std::cout << "adresse de str = " << &str << std::endl;
-	std::cout << "adresse de PTR = " << &stringPTR << std::endl;
+	std::cout << "adresse de PTR = " << stringPTR << std::endl;
 	std::cout << "adresse de REF = " << &stringREF << std::endl << std::endl;
 
 	std::cout << "valeur de str = " << str << std::endl;

@@ -6,7 +6,7 @@
 /*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 14:57:55 by ccottin           #+#    #+#             */
-/*   Updated: 2022/10/07 14:58:20 by ccottin          ###   ########.fr       */
+/*   Updated: 2022/10/10 20:15:24 by ccottin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ int	main(void)
 	Horde[0].announce();
 	Horde->announce();
 	NewYork(Horde);
-	std::cout << "Back to main fonction! ";
-	std::cin >> name;
+	std::cout << "Back to main fonction!" << std::endl << std::endl;
 	delete [] Horde;
 }
